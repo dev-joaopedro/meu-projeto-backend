@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>House Cake</title>
+    <link rel="stylesheet" href="Bolo.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  </head>
+  <body>
+    <header>
+      <img src="/frontend/src/imagens/logo.png" alt="House Cake Logo" />
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+        <!-- Ícone do menu hambúrguer -->
+      </div>
+
+      <nav class="menu" id="nav-menu">
+        <a href="#">HOME</a>
+        <a href="#">PRODUTOS</a>
+        <a href="#">CONTATO</a>
+      </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about">
+      <img src="/frontend/src/imagens/banner.png" alt="House Cake Logo" />
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+      <section class="box-products">
+        <div class="product">
+          <img src="/frontend/src/imagens//bolo-chocolate-1.png" alt="Bolo Chocolate" />
+          <h3>Chocolate com Brigadeiro</h3>
+          <p>O clássico bolo de chocolate, com uma generosa camada de brigadeiro cremoso.</p>
+          <h4>R$ 20,00</h4>
+          <button>Comprar</button>
+        </div>
+
+        <div class="product">
+          <img src="/frontend/src/imagens/bolo-morango-1.png" alt="Bolo de Morango" />
+          <h3>Morango com Chantilly</h3>
+          <p>Massa leve e aerada, recheada com morangos frescos e chantilly macio.</p>
+          <h4>R$ 25,00</h4>
+          <button>Comprar</button>
+        </div>
+
+        <div class="product">
+          <img src="/frontend/src/imagens/bolo-limaociciliano-1.png" alt="Bolo de Ninho" />
+          <h3>Limão Siciliano</h3>
+          <p>Uma combinação refrescante de massa leve de limão, perfeito para os dias de verão.</p>
+          <h4>R$ 30,00</h4>
+          <button>Comprar</button>
+        </div>
+
+        <div class="product">
+          <img src="/frontend/src/imagens/bolo-redvelvet-1.png" alt="Bolo Red Velvet" />
+          <h3>Red Velvet</h3>
+          <p>Um bolo elegante e sofisticado, com massa vermelha e cobertura cremosa de cream cheese.</p>
+          <h4>R$ 35,00</h4>
+          <button>Comprar</button>
+        </div>
+
+        <div class="product">
+          <img src="/frontend/src/imagens/bolo-coco-1.png" alt="Bolo Chocolate" />
+          <h3>Coco Cremoso</h3>
+          <p>Sabor tropical em cada mordida, com uma camada cremosa de coco.</p>
+          <h4>R$ 20,00</h4>
+          <button>Comprar</button>
+        </div>
+
+        <div class="product">
+          <img src="/frontend/src/imagens/bolo-castanha-1.png" alt="Bolo de Morango" />
+          <h3>Cenoura com Chocolate</h3>
+          <p>Massa fofinha de cenoura, coberta com uma irresistível calda de chocolate.</p>
+          <h4>R$ 25,00</h4>
+          <button>Comprar</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- Location Section -->
+    <section class="localizacao">
+      <img src="/frontend/src/imagens/foto-loja.png" alt="Foto da Loja" />
+      <div class="endereco">
+        <h2>Endereço</h2>
+        <p>Rua João Basílio,</p>
+        <p>420 - Centro,</p>
+        <p>Pouso Alegre - MG</p>
+        <i class="fa-solid fa-location-dot"></i>
+      </div>
+    </section>
+
+    <section class="contact-info">
+      <span>Entre em contato!</span>
+      <p>
+        Não espere mais! Prove nossos irresistíveis bolos caseiros e faça de
+        cada momento uma celebração especial. Na House Cake, cada fatia conta
+        uma doce história de amor!
+      </p>
+    </section>
+    
+    <footer>
+      <img class="logo" src="/frontend/src/imagens/logo.png" alt="House Cake Logo" />
+    </footer>
+
+    <script>
+      const mobileMenu = document.getElementById("mobile-menu");
+      const navMenu = document.getElementById("nav-menu");
+
+      mobileMenu.addEventListener("click", () => {
+        navMenu.classList.toggle("show"); // Alterna a classe 'show' para mostrar/esconder o menu
+      });
+
+      // Fechar o menu ao clicar em um link
+      const menuLinks = document.querySelectorAll('nav.menu a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('show'); // Remove a classe 'show' ao clicar no link
+        });
+      });
+    </script>
+  </body>
+</html>

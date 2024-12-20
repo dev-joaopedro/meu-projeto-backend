@@ -1,0 +1,269 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General Styling */
+  body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #f0ede4;
+  }
+  
+  /* Header */
+  header {
+    background-color: #f0ede4;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* Adicionado para o menu dropdown */
+  }
+  
+  header img {
+    height: 50px;
+  }
+  
+  .menu-toggle {
+    display: none; /* Escondido por padrão */
+    cursor: pointer;
+  }
+  
+  /* Menu */
+  nav.menu {
+    display: flex; /* Exibir menu horizontalmente */
+  }
+  
+  nav a {
+    margin: 0px 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* About Section */
+  .about {
+    display: flex;
+  }
+  
+  .about img{
+    width: 100%;
+  }
+  
+  /* Product Section */
+  .products {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .box-products{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    justify-content: center;
+  }
+  
+  .product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    background-color: #f0ede4;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .product img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .product h3 {
+    color: #695343;
+    font-size: 18px;
+    padding: 10px 0;
+  }
+  
+  .product button {
+    border-radius: 8px;
+    background: #c4b293;
+    color: #fff;
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    border: none;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .product button:hover {
+    border: 1px solid #6d5935;
+    box-shadow: 0px 0px 10px #a5906a;
+  }
+  
+  .product p {
+    text-align: justify;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+    height: 70px;
+    color: #695343;
+    font-size: 15px;
+    max-height: 50%;
+    overflow: hidden;
+    line-height: 1.2;
+  }
+  
+  .product h4{
+    margin-bottom: 10px;
+    padding: 5px;
+    color: #695343;
+    font-size: 18px;
+  }
+  
+  /* Location Section */
+  .localizacao {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    background-color: #81654d;
+    color: #fff;
+    border-radius: 100px;
+  }
+  
+  .localizacao img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    float: right;
+  }
+  
+  .endereco {
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #695343;
+    gap: 10px;
+    margin-top: 30px;
+    border-radius: 100px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #f0ede4;
+    padding: 30px;
+    text-align: center;
+    color: #695343;
+  }
+  
+  footer p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Logo Styling */
+  .logo {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+  }
+  
+  /* Media Queries para Responsividade */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav.menu {
+      display:flex; /* Esconde o menu em telas menores */
+      flex-direction: column; /* Coloca os itens do menu em coluna */
+      position: absolute; /* Posiciona o menu */
+      right: 40px;
+      top: 60px; /* Ajuste conforme necessário */
+      background: #f0ede4; /* Cor de fundo do menu */
+      z-index: 1000; /* Coloca o menu acima de outros elementos */
+      border-radius: 10px;
+      border: 1px solid black;
+    }
+  
+    .menu-toggle {
+      background-color: #000000;
+      display: block; /* Mostra o botão do menu hambúrguer em telas menores */
+      cursor: pointer;
+      margin-left: auto; /* Adiciona margem automática para alinhar à direita */
+    }
+  
+    .menu.show {
+      display: flex; /* Mostra o menu quando a classe 'show' é adicionada */
+    }
+  
+    nav a {
+      margin: 10px 0; /* Margens verticais para links em telas menores */
+      padding: 10px; /* Adiciona padding para aumentar a área clicável */
+    }
+  
+    .products {
+      grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+    }
+  
+    .product {
+      max-width: 90%; /* Limita a largura do produto em telas menores */
+    }
+  
+    .about img {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      text-align: center;
+    }
+  
+    nav a {
+      display: block; /* Cada link ocupa uma linha */
+      margin: 0.5rem 0; /* Margens verticais para links */
+    }
+  
+    .products {
+      grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+  
+    .localizacao {
+      flex-direction: column; /* Coloca a localização em coluna */
+      align-items: center; /* Centraliza o conteúdo */
+    }
+  
+    .endereco {
+      width: auto; /* Largura automática para o endereço */
+    }
+  }
+  
+  @media (max-width: 650px){
+    .box-products{
+      width: 100%;
+    }
+  }
